@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container" ref="scrollContainer">
+  <div class="app-container" ref="scrollContainer" :style="{ '--font-scale': 1.2 }">
     <!-- PAGE 1: Invitation & Verses -->
     <div class="invite-card-wrapper" id="page-1">
       <div class="invite-card page-1-bg">
@@ -301,14 +301,14 @@ function scrollToThirdPage() {
   align-items: center;
 }
 
-/* Standardized Verse Typography (3.6cqw for both Tamil and English) */
+/* Standardized Verse Typography (larger page 1 sizes) */
 .kural-tamil {
   font-family: 'Noto Serif Tamil', 'Tiro Tamil', serif;
   font-style: italic;
   font-weight: 600;
   color: #382928;
-  font-size: 3.6cqw;
-  line-height: 1.6;
+  font-size: calc(3.8cqw * var(--font-scale));
+  line-height: 1.45;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -320,15 +320,15 @@ function scrollToThirdPage() {
   font-style: italic;
   font-weight: 600;
   color: #382928;
-  font-size: 3.6cqw;
-  line-height: 1.5;
+  font-size: calc(3.8cqw * var(--font-scale));
+  line-height: 1.4;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
 .invite-wrapper {
-  gap: 0.8cqw;
+  gap: 0.9cqw;
 }
 
 .invite-sub {
@@ -336,7 +336,7 @@ function scrollToThirdPage() {
   font-style: italic;
   font-weight: 600;
   color: #63524b;
-  font-size: 3.0cqw;
+  font-size: calc(3.2cqw * var(--font-scale));
   letter-spacing: 0.03em;
   margin: 0;
   text-align: center;
@@ -346,9 +346,9 @@ function scrollToThirdPage() {
   font-family: 'Cinzel', serif;
   font-weight: 700;
   color: #2b1f1e;
-  font-size: 3.8cqw;
+  font-size: calc(4.0cqw * var(--font-scale));
   line-height: 1.35;
-  margin: 0.6cqw 0;
+  margin: 0.5cqw 0;
   text-align: center;
   letter-spacing: 0.02em;
 }
@@ -358,7 +358,7 @@ function scrollToThirdPage() {
   font-style: italic;
   font-weight: 500;
   color: #ba8d43;
-  font-size: 4.2cqw;
+  font-size: calc(4.4cqw * var(--font-scale));
   margin: 0 0.2cqw;
 }
 
@@ -367,7 +367,7 @@ function scrollToThirdPage() {
   font-style: italic;
   font-weight: 600;
   color: #483837;
-  font-size: 3.4cqw;
+  font-size: calc(3.6cqw * var(--font-scale));
   line-height: 1.45;
   margin: 0;
   text-align: center;
@@ -392,7 +392,7 @@ function scrollToThirdPage() {
   font-family: 'Cinzel', serif;
   font-weight: 700;
   color: #ba8d43;
-  font-size: 3.2cqw;
+  font-size: 3.4cqw;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin: 0 0 0.4cqw 0;
@@ -437,6 +437,7 @@ function scrollToThirdPage() {
   margin: 0.4cqw 0;
   opacity: 0;
 }
+
 
 /* PAGE 3: Venue Details Container */
 .venue-container {
